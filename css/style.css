@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 16px;
+}
+
+span {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+span:hover {
+  opacity: 0.75;
+}
+
+span:active {
+  opacity: 0.5;
+}
+
+body {
+  background: linear-gradient(45deg, green, rgb(49, 70, 52));
+  height: 100%;
+  width: 100%;
+}
+
+.roulette {
+  width: 90%;
+  font-weight: 600;
+}
+
+.red {
+  background-color: red;
+  color: red;
+  width: 30px;
+  height: 30px;
+  border: 2px white solid;
+  transform: rotate(45deg);
+}
+
+.black {
+  background-color: black;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border: 2px white solid;
+  transform: rotate(45deg);
+}
+
+.redNumber {
+  background-color: red;
+  font-size: 20px;
+}
+
+.redNumber span {
+  font-size: 20px;
+}
+
+.blackNumber {
+  background-color: black;
+  font-size: 20px;
+}
+
+.blackNumber span {
+  font-size: 20px;
+}
+
+#number-0 span {
+  font-size: 20px;
+}
+
+.cols-2-to1 {
+  padding: 0px;
+}
+
+.menu .row .col-3 {
+  font-size: 14px;
+}
+
+.spin {
+  width: 90%;
+}
+
+.chipsSelect {
+  width: 35px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.chipsSelect:hover {
+  position: absolute;
+  width: 40px;
+  padding: 0;
+}
+
+.chipsSelect:active {
+  position: absolute;
+  width: 30px;
+  padding: 0;
+}
+
+.coin {
+  width: 30px;
+  position: absolute;
+  cursor: pointer;
+  padding: 0;
+}
+
+.coin:hover {
+  width: 35px;
+}
+
+.coin:active {
+  width: 25px;
+}
+
+@media (min-width: 300px) {
+  .chipsSelect {
+    width: 48px;
+  }
+
+  .chipsSelect:hover {
+    width: 52px;
+  }
+
+  .chipsSelect:active {
+    width: 44px;
+  }
+
+  .coin {
+    width: 35px;
+  }
+
+  .coin:hover {
+    width: 40px;
+  }
+
+  .coin:active {
+    width: 30px;
+  }
+
+  .spin .row .col-4 button {
+    font-size: 21px;
+  }
+  .redNumber {
+    background-color: red;
+    font-size: 21px;
+  }
+
+  .redNumber span {
+    font-size: 21px;
+  }
+
+  .blackNumber {
+    background-color: black;
+    font-size: 21px;
+  }
+
+  .blackNumber span {
+    font-size: 21px;
+  }
+
+  #number-0 span {
+    font-size: 21px;
+  }
+  #colOne,
+  #colTwo,
+  #colThree {
+    font-size: 21px;
+  }
+  .menu .row .col-3 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .chipsSelect {
+    width: 65px;
+  }
+
+  .chipsSelect:hover {
+    width: 70px;
+  }
+
+  .chipsSelect:active {
+    width: 60px;
+  }
+
+  .coin {
+    width: 40px;
+  }
+
+  .coin:hover {
+    width: 45px;
+  }
+
+  .coin:active {
+    width: 35px;
+  }
+  .spin .row .col-4 button {
+    font-size: 22px;
+  }
+  .redNumber {
+    font-size: 22px;
+  }
+
+  .redNumber span {
+    font-size: 22px;
+  }
+
+  .blackNumber {
+    font-size: 22px;
+  }
+
+  .blackNumber span {
+    font-size: 22px;
+  }
+
+  #number-0 span {
+    font-size: 22px;
+  }
+  #colOne,
+  #colTwo,
+  #colThree {
+    font-size: 22px;
+  }
+  .menu .row .col-3 {
+    font-size: 22px;
+  }
+  .roulette {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1150px) {
+  .roulette {
+    width: 50%;
+  }
+  .menu .row .col-3 {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>ruleta</title>
+  </head>
+  <body>
+    <div
+      class="container-fluid border border-1 menu bg-dark bg-gradient text-center"
+    >
+      <div class="row">
+        <div class="col-3 border-end" id="balance">Balance: $1000</div>
+        <div class="col-3 border-end" id="betText">Bet: $0</div>
+        <div class="col-3 border-end" id="legend"></div>
+        <div class="col-3" id="winner"></div>
+      </div>
+    </div>
+    <div
+      class="container text-center roulette border-2 mt-2"
+      id="options"
+      tabindex="0"
+    >
+      <div class="row">
+        <div class="col-4"></div>
+        <div
+          class="col-8 border border-bottom-0 rounded-top d-flex align-items-center justify-content-center"
+          id="number-0"
+        >
+          <span title="0">0</span>
+        </div>
+      </div>
+      <div class="row border border-bottom-0">
+        <div class="col-2 border-end">
+          <div
+            class="row h-50 border-bottom d-flex justify-content-center align-items-center"
+          >
+            <span
+              class="h-50 d-flex justify-content-center align-items-center"
+              title="1 to 18"
+              >1 to 18</span
+            >
+          </div>
+          <div
+            class="row h-50 d-flex justify-content-center align-items-center"
+          >
+            <span
+              class="h-50 d-flex justify-content-center align-items-center"
+              title="EVEN"
+              >EVEN</span
+            >
+          </div>
+        </div>
+        <div class="col-2 d-flex justify-content-center align-items-center">
+          <span
+            class="h-50 d-flex justify-content-center align-items-center"
+            title="1 st 12"
+            >1 st 12</span
+          >
+        </div>
+        <div class="col-8 border-start">
+          <div class="row border-bottom">
+            <div
+              class="col redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="1">1</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="2">2</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="3">3</span>
+            </div>
+          </div>
+          <div class="row border-bottom">
+            <div
+              class="col blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="4">4</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="5">5</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="6">6</span>
+            </div>
+          </div>
+          <div class="row border-bottom">
+            <div
+              class="col redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="7">7</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="8">8</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="9">9</span>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="10">10</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="11">11</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="12">12</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row border border-bottom-0">
+        <div class="col-2 border-end">
+          <div
+            class="row h-50 border-bottom d-flex justify-content-center align-items-center"
+          >
+            <span class="red" title="r">r</span>
+          </div>
+          <div
+            class="row h-50 d-flex justify-content-center align-items-center"
+          >
+            <span class="black" title="b">b</span>
+          </div>
+        </div>
+        <div class="col-2 d-flex justify-content-center align-items-center">
+          <span title="2 nd 12">2 nd 12</span>
+        </div>
+        <div class="col-8 border-start">
+          <div class="row border-bottom">
+            <div
+              class="col blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="13">13</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="14">14</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="15">15</span>
+            </div>
+          </div>
+          <div class="row border-bottom">
+            <div
+              class="col redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="16">16</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="17">17</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="18">18</span>
+            </div>
+          </div>
+          <div class="row border-bottom">
+            <div
+              class="col redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="19">19</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="20">20</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="21">21</span>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="22">22</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="23">23</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="24">24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row border">
+        <div class="col-2 border-end">
+          <div
+            class="row h-50 border-bottom d-flex justify-content-center align-items-center"
+          >
+            <span
+              class="d-flex justify-content-center align-items-center"
+              title="ODD"
+              >ODD</span
+            >
+          </div>
+          <div
+            class="row h-50 d-flex justify-content-center align-items-center"
+          >
+            <span
+              class="h-50 d-flex justify-content-center align-items-center"
+              title="19 to 36"
+              >19 to 36</span
+            >
+          </div>
+        </div>
+        <div class="col-2 d-flex justify-content-center align-items-center">
+          <span title="3 nd 12">3 nd 12</span>
+        </div>
+        <div class="col-8 border-start">
+          <div class="row border-bottom">
+            <div
+              class="col redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="25">25</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="26">26</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="27">27</span>
+            </div>
+          </div>
+          <div class="row border-bottom">
+            <div
+              class="col blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="28">28</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="29">29</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="30">30</span>
+            </div>
+          </div>
+          <div class="row border-bottom">
+            <div
+              class="col blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="31">31</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="32">32</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="33">33</span>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="34">34</span>
+            </div>
+            <div
+              class="col border-start blackNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="35">35</span>
+            </div>
+            <div
+              class="col border-start redNumber d-flex align-items-center justify-content-center"
+            >
+              <span title="36">36</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8 border border-top-0">
+          <div class="row">
+            <div
+              class="col cols-2-to1 d-flex align-items-center justify-content-center"
+            >
+              <span id="colOne" title="2 to 1">2 to 1</span>
+            </div>
+            <div
+              class="col border-start cols-2-to1 d-flex align-items-center justify-content-center"
+            >
+              <span id="colTwo" title="2 to 1">2 to 1</span>
+            </div>
+            <div
+              class="col border-start cols-2-to1 d-flex align-items-center justify-content-center"
+            >
+              <span id="colThree" title="2 to 1">2 to 1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container spin text-center mt-4">
+      <div class="row">
+        <div class="col-4 d-flex justify-content-around">
+          <button type="button" class="btn btn-dark bg-gradient" id="clear">
+            CLEAR
+          </button>
+        </div>
+        <div class="col-4 d-flex justify-content-around">
+          <button type="button" class="btn btn-dark bg-gradient" id="spin">
+            SPIN
+          </button>
+        </div>
+        <div class="col-4 d-flex justify-content-around">
+          <button type="button" class="btn btn-dark bg-gradient" id="repeat">
+            REPEAT
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid border border-1 mt-4 menu bg-dark bg-gradient text-center chips"
+    >
+      <div
+        class="row d-flex align-items-center justify-content-center"
+        id="bet"
+      >
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img
+            src="./img/1.png"
+            class="chipsSelect"
+            id="red-1"
+            title="1"
+            alt=""
+          />
+        </div>
+
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img
+            src="./img/5.png"
+            class="chipsSelect"
+            id="green-5"
+            title="5"
+            alt=""
+          />
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img
+            src="./img/10.png"
+            class="chipsSelect"
+            id="gray-10"
+            title="10"
+            alt=""
+          />
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img
+            src="./img/25.png"
+            class="chipsSelect"
+            id="blue-25"
+            title="25"
+            alt=""
+          />
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img
+            src="./img/50.png"
+            class="chipsSelect"
+            id="violet-50"
+            title="50"
+            alt=""
+          />
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <img
+            src="./img/100.png"
+            class="chipsSelect"
+            id="orange-100"
+            title="100"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
